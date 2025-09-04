@@ -1,0 +1,34 @@
+config VFX_INDICATOR
+    bool "Enable LED indicators for showing battery and connection status"
+
+if VFX_INDICATOR
+
+config LED
+    default y
+
+config PWM
+    default y
+
+config VFX_INDICATOR_BATTERY_LEVEL_HIGH
+    int "High battery level percentage"
+    default 80
+
+config VFX_INDICATOR_BATTERY_LEVEL_MID
+    int "Low battery level percentage"
+    default 50
+
+config VFX_INDICATOR_BATTERY_LEVEL_LOW
+    int "Low battery level percentage"
+    default 20
+
+config VFX_INDICATOR_BATTERY_LEVEL_CRITICAL
+    int "Critical battery level percentage"
+    default 5
+
+endif # VFX_INDICATOR
+
+DT_COMPAT_ZMK_BEHAVIOR_VFX_INDICATOR := zmk,behavior-vfx-indicator
+
+config ZMK_BEHAVIOR_VFX_INDICATOR
+    bool
+    default $(dt_compat_enabled,$(DT_COMPAT_ZMK_BEHAVIOR_VFX_INDICATOR))

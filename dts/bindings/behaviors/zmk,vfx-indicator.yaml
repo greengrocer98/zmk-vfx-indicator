@@ -1,0 +1,11 @@
+description: LED indicator behaviors for showing battery and connection status
+
+compatible: "zmk,behavior-vfx-indicator"
+
+include: zero_param.yaml
+
+properties:
+  check-battery:
+    type: boolean
+  check-connection:
+    type: boolean

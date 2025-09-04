@@ -1,0 +1,14 @@
+/ {
+    behaviors {
+        /omit-if-no-ref/ check_bat: check_bat {
+            compatible = "zmk,behavior-vfx-indicator";
+            #binding-cells = <0>;
+            check-battery;
+        };
+        /omit-if-no-ref/ check_conn: check_conn {
+            compatible = "zmk,behavior-vfx-indicator";
+            #binding-cells = <0>;
+            check-connection;
+        };
+    };
+};

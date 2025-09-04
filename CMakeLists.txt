@@ -1,0 +1,4 @@
+target_sources_ifdef(CONFIG_VFX_INDICATOR app PRIVATE src/indicator.c)
+target_sources_ifdef(CONFIG_ZMK_BEHAVIOR_VFX_INDICATOR app PRIVATE src/behaviors/behavior_vfx_indicator.c)
+
+zephyr_include_directories(include)
