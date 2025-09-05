@@ -18,6 +18,22 @@ Battery animation can show different states of battery level which can be config
 Connection animation shows usb connection animation or profile index animation and next bluetooth connection animation if keyboard is connected using BLE.
 Profile animation can show three different profile indices by default. *You can change profile animation for showing more profile indices though*.
 
+## Demo
+### Battery level high
+https://github.com/user-attachments/assets/a873a52c-481e-4859-a5ed-a1f189a7389b
+
+### USB connection
+https://github.com/user-attachments/assets/be92eaf2-e676-46d9-bd43-439aad33f2c1
+
+### First profile/ BLE connected
+https://github.com/user-attachments/assets/7c637cf1-b3e7-430e-8458-97b944397277
+
+### Second profile/ BLE open
+https://github.com/user-attachments/assets/3a9dc889-7d21-41f1-8d68-8b5772e48811
+
+### Third profile/ BLE closed (Host is sleep)
+https://github.com/user-attachments/assets/067e646b-a5ed-4404-8c52-b9fac54f0de5
+
 ## Installation
 To use, first add this module to your `config/west.yml` by adding a new entry to `remotes` and `projects`:
 
