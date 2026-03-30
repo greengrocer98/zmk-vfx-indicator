@@ -234,7 +234,7 @@ int battery_listener(const zmk_event_t *eh)
 ZMK_LISTENER(battery_state, battery_listener);
 ZMK_SUBSCRIPTION(battery_state, zmk_battery_state_changed);
 
-static int init_animation(const struct device *dev) {
+static int init_animation(void) {
     k_work_queue_init(&animation_work_q);
 
     k_work_queue_start(&animation_work_q, animation_work_q_stack,
