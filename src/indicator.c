@@ -180,7 +180,7 @@ struct k_work_q animation_work_q;
 struct k_work_delayable conn_work;
 void conn_handler(struct k_work *work)
 {
-    switch (zmk_endpoints_selected().transport)
+    switch (zmk_endpoint_get_selected().transport)
     {
     case ZMK_TRANSPORT_USB:
         usb_conn_animation();
